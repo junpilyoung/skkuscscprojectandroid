@@ -22,22 +22,4 @@ public class MainActivity extends AppCompatActivity {
         back0.setImageResource(R.drawable.back_0);
         setContentView(back0);
     }
-
-    public void onButton1Clicked(View v){
-        Toast.makeText(getApplicationContext(),"시작 버튼이 눌림",Toast.LENGTH_LONG).show();
-    }
-    public void onButton3Clicked(View v){
-        Intent i = new Intent(Intent.ACTION_VIEW, Uri.parse("http://m.naver.com"));
-        startActivity(i);
-    }
-    public void onButton2Clicked(View v){
-        Intent i = new Intent(getApplicationContext(),MenuActivity.class);
-        startActivity(i);
-    }
-
-    public void onButton4Clicked(View v){
-        Intent i = new Intent(getApplicationContext(),IntroActivity.class);
-        startActivity(i);
-    }
-
 }
