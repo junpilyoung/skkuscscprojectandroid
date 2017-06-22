@@ -119,12 +119,36 @@
                     android:orientation="horizontal"
                     android:layout_weight="1">
 
+                    <Spinner
+                        android:id="@+id/SelectDivision"
+                        android:layout_width="72dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left"
+                        android:background="@android:drawable/btn_dropdown"
+                        android:spinnerMode="dropdown" />
+                    <Spinner
+                        android:id="@+id/SelectCampus"
+                        android:layout_width="72dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left"
+                        android:background="@android:drawable/btn_dropdown"
+                        android:spinnerMode="dropdown" />
+
+                    <Spinner
+                        android:id="@+id/SelectSearch"
+                        android:layout_width="72dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left"
+                        android:background="@android:drawable/btn_dropdown"
+                        android:spinnerMode="dropdown" />
                     <EditText
                         android:id="@+id/editText"
                         style="@style/Widget.AppCompat.EditText"
-                        android:layout_width="wrap_content"
+                        android:layout_width="100dp"
                         android:layout_height="30dp"
                         android:layout_marginRight="5dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_gravity="right"
                         android:ems="10"
                         android:inputType="text"
                         android:text="검색어를 입력하세요"
@@ -135,6 +159,8 @@
                         android:id="@+id/SearchButton"
                         android:layout_width="40dp"
                         android:layout_height="30dp"
+                        android:onClick="SearchAction"
+                        android:layout_gravity="right"
                         app:srcCompat="@drawable/search_btn" />
                 </LinearLayout>
             </LinearLayout>
@@ -142,7 +168,131 @@
             <FrameLayout
                 android:id="@+id/ListIndex"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:background="#9fd0e2"
+                android:layout_margin="10dp">
+
+                <LinearLayout
+                    android:id="@+id/SessionList"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="3dp"
+                        android:background="#ffffff"
+                        android:orientation="vertical"
+                        android:padding="3dp">
+
+                        <Button
+                            android:id="@+id/ViewMore1"
+                            android:layout_width="70dp"
+                            android:layout_height="30dp"
+                            android:layout_gravity="right"
+                            android:background="#1f7230"
+                            android:text="더보기"
+                            android:textColor="#ffffff"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/goRecruting"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:layout_margin="0dp"
+                            android:layout_weight="1"
+                            android:background="#dddddd"
+                            android:onClick="goRecruting"
+                            android:padding="0dp"
+                            android:text="리크루팅"
+                            android:textColor="#999999"
+                            android:textSize="18dp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/SessionTitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="1"
+                            android:text="채용설명회"
+                            android:textAlignment="center"
+                            android:textColor="#000000"
+                            android:textSize="18dp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/RecrutingList"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="invisible">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="3dp"
+                        android:background="#ffffff"
+                        android:orientation="vertical"
+                        android:padding="3dp">
+
+                        <Button
+                            android:id="@+id/ViewMore2"
+                            android:layout_width="70dp"
+                            android:layout_height="30dp"
+                            android:layout_gravity="right"
+                            android:background="#1f7230"
+                            android:text="더보기"
+                            android:textColor="#ffffff"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/RecrutingTitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="1"
+                            android:text="리크루팅"
+                            android:textAlignment="center"
+                            android:textColor="#000000"
+                            android:textSize="18dp"
+                            android:textStyle="bold" />
+
+                        <Button
+                            android:id="@+id/goSession"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:layout_margin="0dp"
+                            android:layout_weight="1"
+                            android:background="#dddddd"
+                            android:onClick="goSession"
+                            android:padding="0dp"
+                            android:text="채용설명회"
+                            android:textColor="#999999"
+                            android:textSize="18dp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
 
             </FrameLayout>
 
