@@ -24,4 +24,9 @@ public class IndexActivity extends AppCompatActivity {
         startActivity(homeIntent);
     }
 
+    public void goContact(View v){
+        Intent ContactIntent = new Intent(getApplicationContext(),ContactActivity.class);
+        startActivity(ContactIntent);
+    }
+
 }

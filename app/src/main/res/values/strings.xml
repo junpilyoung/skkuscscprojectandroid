@@ -5,4 +5,7 @@
     <string name="dummy_button">Dummy Button</string>
     <string name="dummy_content">DUMMY\nCONTENT</string>
     <string name="string">메뉴화면</string>
+    <string name="Certification_Title">인증화면 타이틀</string>
+    <string name="LOGO">로고</string>
+    <string name="LOGO_2">어플리케이션 로고2</string>
 </resources>

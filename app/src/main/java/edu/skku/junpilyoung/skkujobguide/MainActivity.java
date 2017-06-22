@@ -12,16 +12,16 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        goIndex();
     }
 
-    public void goCertificate(View v){
+    public void goCertificate(){
         Intent i = new Intent(getApplicationContext(), CertificateActivity.class);
         startActivity(i);
     }
-/*
-    public void goIndex(View v){
+
+    public void goIndex(){
         Intent i = new Intent(getApplicationContext(), IndexActivity.class);
         startActivity(i);
     }
-*/
 }
