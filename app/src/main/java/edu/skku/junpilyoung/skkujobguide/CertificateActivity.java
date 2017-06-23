@@ -25,7 +25,7 @@ public class CertificateActivity extends AppCompatActivity {
     private FrameLayout checkMail;
     private FrameLayout certificationFinal;
 
-    static String emailaddr;
+    static String EmailAddr;
     static String MailCode;
 
 
@@ -57,14 +57,14 @@ public class CertificateActivity extends AppCompatActivity {
         sendMail = (FrameLayout)findViewById(R.id.sendMail);
         checkMail= (FrameLayout)findViewById(R.id.checkMail);
 
-        emailaddr = mailAddr.getText().toString();
-        if (isValidEmail(emailaddr)==true){
+        EmailAddr = mailAddr.getText().toString();
+        if (isValidEmail(EmailAddr)){
             sendMailError.setVisibility(View.INVISIBLE);
             try{
                 GMailSender gMailSender = new GMailSender("junpilyoung@gmail.com", "dbgPdus1!@");
                 MailCode = gMailSender.getEmailCode();
                 String message = "인증번호를 보내드립니다.\n\n"+MailCode+"\n\n위 코드를 입력하세요.";
-                gMailSender.sendMail("인증메일을 보냅니다.", message, emailaddr+"@skku.edu");
+                gMailSender.sendMail("인증메일을 보냅니다.", message, EmailAddr+"@skku.edu");
                 Toast.makeText(getApplicationContext(), "이메일을 성공적으로 보냈습니다.", Toast.LENGTH_SHORT).show();
                 sendMail.setVisibility(View.INVISIBLE);
                 checkMail.setVisibility(View.VISIBLE);
