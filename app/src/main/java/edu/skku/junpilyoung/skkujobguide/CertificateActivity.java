@@ -64,7 +64,6 @@ public class CertificateActivity extends AppCompatActivity {
             sendMailError.setVisibility(View.INVISIBLE);
             try{
                 GMailSender gMailSender = new GMailSender("junpilyoung@gmail.com", "dbgPdus1!@");
-                //GMailSender.sendMail(제목, 본문내용, 받는사람);getEmailCode()
                 MailCode = gMailSender.getEmailCode();
                 String message = "인증번호를 보내드립니다.\n\n"+MailCode+"\n\n위 코드를 입력하세요.";
                 gMailSender.sendMail("인증메일을 보냅니다.", message, emailaddr+"@skku.edu");
