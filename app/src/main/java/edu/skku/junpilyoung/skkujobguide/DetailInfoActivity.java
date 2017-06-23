@@ -1,10 +1,9 @@
 package edu.skku.junpilyoung.skkujobguide;
 
-import android.database.Cursor;
-import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Toast;
 
 public class DetailInfoActivity extends AppCompatActivity {
 
@@ -15,6 +14,6 @@ public class DetailInfoActivity extends AppCompatActivity {
     }
 
     public void addMyPhone(View v){
-
+        Toast.makeText(getApplicationContext(), "준비중입니다.", Toast.LENGTH_SHORT).show();
     }
 }

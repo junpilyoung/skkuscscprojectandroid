@@ -6,7 +6,8 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@drawable/back_0"
-    android:weightSum="1">
+    android:weightSum="1"
+    tools:context="edu.skku.junpilyoung.skkujobguide.MainActivity">
 
     <FrameLayout
         android:layout_width="match_parent"

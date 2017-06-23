@@ -3,6 +3,8 @@
     package="edu.skku.junpilyoung.skkujobguide">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_CALENDAR"/>
+    <uses-permission android:name="android.permission.READ_CALENDAR"/>
 
     <application
         android:allowBackup="true"
@@ -39,6 +41,8 @@
         <activity android:name=".CertificateActivity" />
         <activity android:name=".IndexActivity" />
         <activity android:name=".ContactActivity" />
+        <activity android:name=".AllInfoActivity" />
+        <activity android:name=".DetailInfoActivity"></activity>
     </application>
 
 </manifest>

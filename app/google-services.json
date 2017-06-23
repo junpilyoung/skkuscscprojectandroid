@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "774065065514",
+    "firebase_url": "https://skkuscscproject.firebaseio.com",
+    "project_id": "skkuscscproject",
+    "storage_bucket": "skkuscscproject.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:774065065514:android:b19c547c8e4d66ba",
+        "android_client_info": {
+          "package_name": "edu.skku.junpilyoung.skkujobguide"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "774065065514-9i7tfovqnjasoo3crtkp9gjisqnerhhc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAnL9rGNmaC1ID_2aJSl9Iu5Oc2pjWv0ck"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

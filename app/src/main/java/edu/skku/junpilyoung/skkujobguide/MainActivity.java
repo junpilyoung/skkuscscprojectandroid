@@ -4,14 +4,13 @@ package edu.skku.junpilyoung.skkujobguide;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.View;
 import java.util.*;
 
 public class MainActivity extends AppCompatActivity {
     public class MyTimeTask extends TimerTask {
         @Override
         public void run() {
-            goIndex(1);
+            goCertificate(1);
         }
     }
     @Override

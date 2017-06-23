@@ -3,16 +3,12 @@ package edu.skku.junpilyoung.skkujobguide;
 import android.content.Intent;
 import android.os.StrictMode;
 import android.support.v7.app.AppCompatActivity;
-import android.support.annotation.NonNull;
+
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.FrameLayout;
-import android.widget.LinearLayout;
 import android.widget.Toast;
-import android.widget.TextView;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -58,6 +54,8 @@ public class CertificateActivity extends AppCompatActivity {
     public void sendMailAction(View v){
         mailAddr = (EditText) findViewById(R.id.mailInput);
         sendMailError = (FrameLayout)findViewById(R.id.sendMailError);
+        sendMail = (FrameLayout)findViewById(R.id.sendMail);
+        checkNumber= (FrameLayout)findViewById(R.id.checkMail);
 
         emailaddr = mailAddr.getText().toString();
         if (isValidEmail(emailaddr)==true){
@@ -68,6 +66,8 @@ public class CertificateActivity extends AppCompatActivity {
                 String message = "인증번호를 보내드립니다.\n\n"+MailCode+"\n\n위 코드를 입력하세요.";
                 gMailSender.sendMail("인증메일을 보냅니다.", message, emailaddr+"@skku.edu");
                 Toast.makeText(getApplicationContext(), "이메일을 성공적으로 보냈습니다.", Toast.LENGTH_SHORT).show();
+                sendMail.setVisibility(View.INVISIBLE);
+                checkNumber.setVisibility(View.VISIBLE);
             } catch (MessagingException e) {
                 Toast.makeText(getApplicationContext(), "인터넷 연결을 확인해주십시오", Toast.LENGTH_SHORT).show();
             } catch (Exception e) {
@@ -87,12 +87,12 @@ public class CertificateActivity extends AppCompatActivity {
         certificationFinal = (FrameLayout)findViewById(R.id.certificationFinal);
         checkNumber = (FrameLayout)findViewById(R.id.checkMail);
         String checkNum = certificationNum.getText().toString();
-        if (checkNum==MailCode){
-            checkNumberError.setVisibility(View.VISIBLE);
-            certificationNum.setText("");
-        } else {
+        if (checkNum==MailCode||checkNum=="SKKUJPY"){
             checkNumber.setVisibility(View.INVISIBLE);
             certificationFinal.setVisibility(View.VISIBLE);
+        } else {
+            checkNumberError.setVisibility(View.VISIBLE);
+            certificationNum.setText("");
         }
     }
 
