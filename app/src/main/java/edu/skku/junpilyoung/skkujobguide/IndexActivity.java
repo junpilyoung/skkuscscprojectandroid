@@ -36,11 +36,6 @@ public class IndexActivity extends AppCompatActivity {
 
     }
 
-    public void onBackButtonClick(View v){
-        Intent backIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("tel:00"));
-        startActivity(backIntent);
-    }
-
     public void onHomeButtonClick(View v){
         Intent homeIntent = new Intent(getApplicationContext(),IndexActivity.class);
         startActivity(homeIntent);
@@ -68,5 +63,10 @@ public class IndexActivity extends AppCompatActivity {
         RecrutingView = (LinearLayout)findViewById(R.id.RecrutingList);
         SessionView .setVisibility(View.VISIBLE);
         RecrutingView.setVisibility(View.INVISIBLE);
+    }
+
+    public void viewMore1(View v){
+        Intent InfoIntent = new Intent(getApplicationContext(),AllInfoActivity.class);
+        startActivity(InfoIntent);
     }
 }
