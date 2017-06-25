@@ -24,10 +24,11 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void goNext(int x){
+        Intent i = new Intent();
         if (x==0){
-            Intent i = new Intent(getApplicationContext(), CertificateActivity.class);
+            i = new Intent(getApplicationContext(), CertificateActivity.class);
         } else {
-            Intent i = new Intent(getApplicationContext(), IndexActivity.class);
+            i = new Intent(getApplicationContext(), IndexActivity.class);
         }
         startActivity(i);
     }
