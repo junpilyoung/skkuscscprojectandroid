@@ -58,6 +58,7 @@ public class CertificateActivity extends AppCompatActivity {
         checkMail= (FrameLayout)findViewById(R.id.checkMail);
 
         EmailAddr = mailAddr.getText().toString();
+
         if (isValidEmail(EmailAddr)){
             sendMailError.setVisibility(View.INVISIBLE);
             try{

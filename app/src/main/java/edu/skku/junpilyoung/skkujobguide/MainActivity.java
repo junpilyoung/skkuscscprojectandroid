@@ -10,7 +10,7 @@ public class MainActivity extends AppCompatActivity {
     public class MyTimeTask extends TimerTask {
         @Override
         public void run() {
-            goCertificate(1);
+            goNext(1);
         }
     }
     @Override
@@ -23,13 +23,13 @@ public class MainActivity extends AppCompatActivity {
         t.schedule(task1,2000);
     }
 
-    public void goCertificate(int x){
-        Intent i = new Intent(getApplicationContext(), CertificateActivity.class);
+    public void goNext(int x){
+        if (x==0){
+            Intent i = new Intent(getApplicationContext(), CertificateActivity.class);
+        } else {
+            Intent i = new Intent(getApplicationContext(), IndexActivity.class);
+        }
         startActivity(i);
     }
 
-    public void goIndex(int x){
-        Intent i = new Intent(getApplicationContext(), IndexActivity.class);
-        startActivity(i);
-    }
 }

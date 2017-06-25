@@ -52,14 +52,14 @@ public class IndexActivity extends AppCompatActivity {
     public void goRecruting(View v){
         SessionView = (LinearLayout)findViewById(R.id.SessionList);
         RecrutingView = (LinearLayout)findViewById(R.id.RecrutingList);
-        SessionView .setVisibility(View.INVISIBLE);
+        SessionView.setVisibility(View.INVISIBLE);
         RecrutingView.setVisibility(View.VISIBLE);
     }
 
     public void goSession(View v){
         SessionView = (LinearLayout)findViewById(R.id.SessionList);
         RecrutingView = (LinearLayout)findViewById(R.id.RecrutingList);
-        SessionView .setVisibility(View.VISIBLE);
+        SessionView.setVisibility(View.VISIBLE);
         RecrutingView.setVisibility(View.INVISIBLE);
     }
 
