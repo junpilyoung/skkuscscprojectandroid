@@ -30,6 +30,7 @@ public class MainActivity extends AppCompatActivity {
         } else {
             i = new Intent(getApplicationContext(), IndexActivity.class);
         }
+
         startActivity(i);
     }
 
